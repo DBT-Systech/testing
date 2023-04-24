@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: src_payment
+    description: "this is payement related to custmoer orders."
+    columns:
+      - name: orderid
+        type: interger
+        tests:
+          - relationships:
+              to: ref('src_js__orders')
+              field: id
